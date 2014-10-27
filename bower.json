@@ -1,0 +1,18 @@
+{
+  "name": "polyTut",
+  "version": "0.0.0",
+  "authors": [
+    "krishnateja262"
+  ],
+  "description": "polymer tutorial 1",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

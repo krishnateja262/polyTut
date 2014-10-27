@@ -1,0 +1,16 @@
+<link rel="import" href="../components/polymer/polymer.html">
+
+<polymer-element name="x-button" extends="button" on-click={{clicky}}>
+  <template>
+    <style>
+    </style>
+    <content></content>
+  </template>
+  <script>
+  Polymer({
+  	clicky: function(){
+  		this.innerHTML = this.innerHTML.split('').reverse().join('');
+  	}
+  });
+  </script>
+</polymer-element>
