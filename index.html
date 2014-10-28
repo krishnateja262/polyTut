@@ -4,12 +4,14 @@
 	<meta charset="UTF-8"> 
 	<title>Poly!!!!</title>
 	<script src="bower_components/platform/platform.js"></script>
-	<script src="bower_components/polymer/polymer.js"></script>
 	<link rel="import" href="./component/hello-world.html">
 	<link rel="import" href="./component/data-bind.html">
 	<link rel="import" href="./component/x-button.html">
 	<link rel="import" href="./component/light-style.html">
 	<link rel="import" href="./component/shadow-style.html">
+	<link rel="import" href="./component/content-style.html">
+	<link rel="import" href="./component/boot-style.html">
+	<link rel="import" href="./component/boot-repeat.html">
 
 	<style type="text/css">
 		light-style .shadoww{
@@ -18,17 +20,47 @@
 		shadow-style::shadow .shadoww{
 			color: red;
 		}
+		shadow-style{
+			font-size: 2em;
+		}/*This ovverrides the custom element styling*/
 	</style>
 </head>
 <body>
 	<hello-world></hello-world><hr>
+
 	<data-bind></data-bind><hr>
+
 	<button is="x-button">Hello World!!</button><hr>
+
 	<light-style>
 		<p class="shadoww">This is the light dom element</p>
 	</light-style><hr>
+
 	<shadow-style>
 		<p>This is light dom element not colored due to lack of styling :p</p>
-	</shadow-style>
+	</shadow-style><hr>
+
+	<shadow-style class="another">
+		<p>This is light dom element not colored due to lack of styling :p</p>
+	</shadow-style><hr>
+
+	<div class="parent">
+		<shadow-style>
+			<p>This is light dom element not colored due to lack of styling :p</p>
+		</shadow-style>
+	</div><hr>
+
+	<content-style>
+		<img src="http://cdn.tinybuddha.com/wp-content/uploads/2012/08/Tiny-Buddha.jpg">
+		<p>This is a sample 1 p tag!!</p>
+		<footer>
+			<p>First p tag in footer</p>
+			<p>Second p tag in footer</p>
+		</footer>
+	</content-style><hr>
+	<!-- With bootstrap and attributes and filters-->
+	<boot-style first="Contact" second="Krishna" third="gottam"></boot-style><hr>
+
+	<boot-repeat></boot-repeat><hr>
 </body>
 </html>

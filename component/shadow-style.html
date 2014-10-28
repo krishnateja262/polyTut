@@ -1,9 +1,16 @@
-<link rel="import" href="../components/polymer/polymer.html">
-
 <polymer-element name="shadow-style">
   <template>
     <style>
-
+      :host{
+        display: block;
+        background: green;
+      }/* For the whole element*/
+      :host(.another){
+        background: blue;
+      }
+      :host-context(.parent){
+        background: yellow;
+      }/*for styling the parent of the element*/
     </style>
 
     <!-- CARD CONTENTS GO HERE -->

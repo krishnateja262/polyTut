@@ -1,0 +1,33 @@
+<link rel="import" href="../filter/filter.html">
+<polymer-element name="boot-style" attributes="first second third">
+  <template>
+  	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+    </style>
+
+    <!-- CARD CONTENTS GO HERE -->
+    <h3>BootStrap and Filtering</h3>
+    <a href="#" class="btn btn-primary btn-lg" role="button">Learn more »</a>
+    <button type="button" class="btn btn-lg btn-danger">Danger</button>
+    <div class="navbar navbar-inverse">
+	    <div class="container">
+	    	<div class="navbar-header">
+	    		<a href="#" class="navbar-brand">Project Name</a>
+	    	</div>
+	    	<div class="navbar-collapse collapse">
+	    		<ul class="nav navbar-nav">
+	    			<li class="active"><a href="#">Home</a></li>
+	    			<li><a href="#">About</a></li>
+	    			<li><a href="#">{{first}}</a></li>
+	    			<li><a href="#">{{second}}</a></li>
+	    			<li><a href="#">{{third | ab}}</a></li>
+	    			<li><a href="https://github.com/addyosmani/polymer-filters">Filters</a></li>
+	    		</ul>
+	    	</div>
+	    </div>
+    </div>
+  </template>
+  <script>
+  Polymer('boot-style',{});
+  </script>
+</polymer-element>

@@ -1,0 +1,26 @@
+<link rel="import" href="./boot-style.html">
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+
+<polymer-element name="boot-repeat">
+  <template>
+    <style>
+    </style>
+    <!-- CARD CONTENTS GO HERE -->
+    <h1>Repeat Template</h1>
+    <core-ajax
+      auto
+      url="http://www.filltext.com"
+      param='{"rows":"5", "fname":"{first}","lname":"{second}","company":"{third}"}'
+      handleAs="json"
+      response="{{boots}}"
+    ></core-ajax>
+    <template repeat="{{boot in boots}}">
+    	<boot-style first="{{boot.first}}" second="{{boot.second}}" third="{{boot.third}}"></boot-style>
+    </template>
+  </template>
+  <script>
+  Polymer('boot-repeat',{
+  	boots:[],
+  });
+  </script>
+</polymer-element>

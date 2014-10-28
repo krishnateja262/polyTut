@@ -1,0 +1,44 @@
+<polymer-element name="content-style" noscript>
+  <template>
+    <style>
+      :host{
+        display: block;
+        color: white;
+        background: black;
+        width: 300px;
+        height: 300px;
+        opacity: 0.6;
+        padding: 20px;
+      }
+      polyfill-next-selector { content: ''; }
+      ::content p{
+        color: red;
+      }/*applies to every p tag in the element*/
+      polyfill-next-selector { content: 'p:first-child'; }
+      ::content p:first-child{
+        color:green;
+      }/*applies to every first p child in the DOM*/
+      polyfill-next-selector { content: 'footer > p'; }
+      ::content footer > p{
+        color: blue;
+      }
+       polyfill-next-selector { content: '.card img'; }
+      ::content img{
+        width: 70px;
+        border-radius: 50%;
+        margin: 10px;
+      }
+    </style>
+
+    <!-- CARD CONTENTS GO HERE -->
+    <h1>Custom Styling</h1>
+    <div class="card">
+      <content select="img"></content>
+      <content select="p"></content>
+      <content></content>
+    </div>
+  </template>
+  <script>
+  Polymer({});
+  </script>
+</polymer-element>
